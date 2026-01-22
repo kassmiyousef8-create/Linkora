@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Linkora | منصة ربط الخدمات والإعلانات</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #0a2540;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .lang-switch button {
+      margin-left: 10px;
+      padding: 6px 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .container {
+      padding: 20px;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    footer {
+      background: #0a2540;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1 id="title">Linkora - منصة الخدمات والإعلانات</h1>
+  <div class="lang-switch">
+    <button onclick="setLang('ar')">AR</button>
+    <button onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<div class="container">
+  <div class="search-box">
+    <input type="text" id="search" placeholder="ابحث عن خدمة، شركة، مسوّق، صانع محتوى...">
+  </div>
+
+  <div class="sections">
+    <div class="card">
+      <h3 id="sec1">الإعلانات</h3>
+      <p id="sec1p">شركات وأفراد يعرضون إعلاناتهم مع ربط حساباتهم الاجتماعية.</p>
+    </div>
+
+    <div class="card">
+      <h3 id="sec2">الخدمات</h3>
+      <p id="sec2p">تسويق، تصميم، برمجة، تصوير، صناعة محتوى.</p>
+    </div>
+
+    <div class="card">
+      <h3 id="sec3">الوسطاء</h3>
+      <p id="sec3p">وسطاء بين الشركات والعملاء مع تقييم وترتيب.</p>
+    </div>
+
+    <div class="card">
+      <h3 id="sec4">الشركات</h3>
+      <p id="sec4p">شركات، مصانع، محلات مصنفة حسب النشاط.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Linkora Platform - All Rights Reserved</p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    if (lang === 'en') {
+      document.documentElement.lang = "en";
+      document.getElementById("title").innerText = "Linkora - Services & Ads Platform";
+      document.getElementById("search").placeholder = "Search for a service, company, marketer, creator...";
+      document.getElementById("sec1").innerText = "Advertisements";
+      document.getElementById("sec1p").innerText = "Companies and individuals promoting ads with social links.";
+      document.getElementById("sec2").innerText = "Services";
+      document.getElementById("sec2p").innerText = "Marketing, design, development, media creation.";
+      document.getElementById("sec3").innerText = "Brokers";
+      document.getElementById("sec3p").innerText = "Mediators ranked by trust and performance.";
+      document.getElementById("sec4").innerText = "Companies";
+      document.getElementById("sec4p").innerText = "Businesses categorized by industry.";
+    } else {
+      location.reload();
+    }
+  }
+</script>
+
+</body>
+  </html>
